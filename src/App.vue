@@ -1,7 +1,11 @@
 <template>
   <v-app>
     <Header />
-    <v-content></v-content>
+    <v-content>
+      <section class="section-content">
+        <router-view></router-view>
+      </section>
+    </v-content>
   </v-app>
 </template>
 
@@ -14,3 +18,9 @@ export default {
 };
 </script>
 
+<style lang="scss" scoped>
+section.section-content {
+  margin-top: 50px;
+  padding: 0px 30px;
+}
+</style>

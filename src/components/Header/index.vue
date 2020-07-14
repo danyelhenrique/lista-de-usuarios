@@ -1,71 +1,67 @@
 <template>
-  <v-app>
-    <v-app-bar
-      app
-      color="primary py-12 d-flex align-center"
-      light
-      absolute
-      min-width="100%"
-      flat
-      class="header"
-    >
-      <div class="d-flex align-center justify-space-between container nav-container">
-        <div class="group d-flex align-center">
-          <v-btn href="/" text>
-            <v-img
-              alt="Vuetify Logo"
-              class="shrink mr-2"
-              contain
-              :src="logoSrc"
-              transition="scale-transition"
-              width="65"
-            />
-          </v-btn>
+  <v-app-bar
+    app
+    color="primary py-12 d-flex align-center"
+    light
+    absolute
+    min-width="100%"
+    flat
+    class="header"
+  >
+    <div class="d-flex align-center justify-space-between container nav-container">
+      <div class="group d-flex align-center">
+        <v-btn href="/" text>
+          <v-img
+            alt="Vuetify Logo"
+            class="shrink mr-2"
+            contain
+            :src="logoSrc"
+            transition="scale-transition"
+            width="65"
+          />
+        </v-btn>
 
-          <div class="seperator" />
+        <div class="seperator" />
 
-          <div class="d-flex nav-icons-user-securi-icon">
-            <div class="person-shild">
-              <i class="material-icons icon-secondary-color">security</i>
-            </div>
-
-            <div class="person-shild">
-              <i class="material-icons">person</i>
-            </div>
+        <div class="d-flex nav-icons-user-securi-icon">
+          <div class="person-shild">
+            <i class="material-icons icon-secondary-color">security</i>
           </div>
 
-          <SearchBar />
+          <div class="person-shild">
+            <i class="material-icons">person</i>
+          </div>
         </div>
 
-        <div class="group pa-2 nav-icons-container d-flex align-center justify-center">
-          <v-btn class="filter nav-button-size">
-            <img :src="filter" alt="filter" class="filter-icon" />
-          </v-btn>
-
-          <v-btn class="add-user button action button nav-shadow" large>
-            <i class="material-icons mr-1" style="font-size: 20px">person</i>
-            <p>Incluir Usuario</p>
-          </v-btn>
-
-          <div class="seperator" />
-
-          <v-btn class="button no-bg no-shadow nav-button-size">
-            <i class="material-icons icon-secondary-color">home</i>
-          </v-btn>
-
-          <v-btn class="button no-bg no-shadow nav-button-size">
-            <i class="material-icons icon-secondary-color">settings</i>
-          </v-btn>
-
-          <v-btn class="button no-bg no-shadow nav-button-size">
-            <i class="material-icons icon-secondary-color">power_settings_new</i>
-          </v-btn>
-        </div>
+        <SearchBar />
       </div>
-    </v-app-bar>
 
-    <v-content></v-content>
-  </v-app>
+      <div class="group pa-2 nav-icons-container d-flex align-center justify-center">
+        <v-btn class="filter nav-button-size">
+          <img :src="filter" alt="filter" class="filter-icon" />
+        </v-btn>
+
+        <v-btn class="add-user button action button nav-shadow" large>
+          <i class="material-icons mr-1" style="font-size: 20px">person</i>
+          <p>Incluir Usuario</p>
+        </v-btn>
+
+        <div class="seperator" />
+
+        <v-btn class="button no-bg no-shadow nav-button-size">
+          <i class="material-icons icon-secondary-color">home</i>
+        </v-btn>
+
+        <v-btn class="button no-bg no-shadow nav-button-size">
+          <i class="material-icons icon-secondary-color">settings</i>
+        </v-btn>
+
+        <v-btn class="button no-bg no-shadow nav-button-size">
+          <i class="material-icons icon-secondary-color">power_settings_new</i>
+        </v-btn>
+      </div>
+    </div>
+  </v-app-bar>
 </template>
 
 
