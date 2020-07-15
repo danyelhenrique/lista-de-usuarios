@@ -1,11 +1,11 @@
 <template>
-  <div class="home">
-    <h1>ola</h1>
-  </div>
+  <ListUser />
 </template>
 
 <script>
+import ListUser from "@/components/ListUser";
 export default {
-  name: "Home"
+  name: "Home",
+  components: { ListUser }
 };
 </script>

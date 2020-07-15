@@ -107,7 +107,7 @@ header .v-toolbar__content {
   background: #e0e0e0;
 }
 .header {
-  box-shadow: 0px 0px 4px -1px rgba(0, 0, 0, 0.2) !important;
+  box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.1) !important;
 }
 
 .filter {
