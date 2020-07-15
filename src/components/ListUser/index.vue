@@ -63,83 +63,12 @@
 export default {
   name: "ListUsers",
   data: function() {
-    return {
-      users: [
-        {
-          name: "Eclair",
-          email: "test@gmail.com",
-          created_at: "30/05/2020",
-          rules: "01",
-          updated_at: "30/05/2020",
-          status: true,
-          actions: "...",
-        },
-        {
-          name: "Cupcake",
-          email: "test@gmail.com",
-          created_at: "30/05/2020",
-          rules: "01",
-          updated_at: "30/05/2020",
-          status: true,
-          actions: "...",
-        },
-        {
-          name: "Gingerbread",
-          email: "test@gmail.com",
-          created_at: "30/05/2020",
-          rules: "01",
-          updated_at: "30/05/2020",
-          status: true,
-          actions: "...",
-        },
-        {
-          name: "Eclair",
-          email: "test@gmail.com",
-          created_at: "30/05/2020",
-          rules: "01",
-          updated_at: "30/05/2020",
-          status: true,
-          actions: "...",
-        },
-        {
-          name: "Cupcakee",
-          email: "test@gmail.com",
-          created_at: "30/05/2020",
-          rules: "01",
-          updated_at: "30/05/2020",
-          status: true,
-          actions: "...",
-        },
-
-        {
-          name: "Jelly beana",
-          email: "test@gmail.com",
-          created_at: "30/05/2020",
-          rules: "01",
-          updated_at: "30/05/2020",
-          status: false,
-          actions: "...",
-        },
-        {
-          name: "Lollipopp",
-          email: "test@gmail.com",
-          created_at: "30/05/2020",
-          rules: "01",
-          updated_at: "30/05/2020",
-          status: false,
-          actions: "...",
-        },
-        {
-          name: "Honeycombn",
-          email: "test@gmail.com",
-          created_at: "30/05/2020",
-          rules: "01",
-          updated_at: "30/05/2020",
-          status: true,
-          actions: "...",
-        },
-      ],
-    };
+    return {};
+  },
+  computed: {
+    users() {
+      return this.$store.state.users.users;
+    },
   },
 };
 </script>

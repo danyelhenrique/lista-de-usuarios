@@ -1,3 +1,5 @@
 import filterPanel from "./filterPanel";
-const modules = { filterPanel };
+import users from "./users";
+
+const modules = { filterPanel, users };
 export default modules;
