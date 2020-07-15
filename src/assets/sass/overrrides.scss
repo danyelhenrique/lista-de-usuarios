@@ -2,9 +2,10 @@
   box-shadow: none !important;
 }
 
-.button.nav-shadow , .no-shadow{
+.button.nav-shadow {
   box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.1) !important;
 }
+
 .button.no-border {
   border: none !important;
 }
@@ -19,9 +20,8 @@
 
 .no-min-widht {
   min-width: unset !important;
-
 }
-.nav-button-size {
+.nav-button-size, .button-size {
   width: 50px !important;
   height: 50px !important;
   min-width: unset !important;
