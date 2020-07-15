@@ -23,9 +23,9 @@
           />
         </v-btn>
 
-        <div class="seperator" />
+        <div class="seperator hidde-header-nav-on-small" />
 
-        <div class="d-flex nav-icons-user-securi-icon">
+        <div class="nav-icons-user-securi-icon hidde-header-nav-on-small">
           <div class="person-shild">
             <i class="material-icons icon-secondary-color">security</i>
           </div>
@@ -39,7 +39,7 @@
       </div>
 
       <div
-        class="group pa-2 nav-icons-container d-flex align-center justify-center"
+        class="group pa-2 nav-icons-container align-center justify-center hidde-header-nav-on-small"
       >
         <v-btn class="filter nav-button-size" @click="showFilterPanel">
           <img :src="filter" alt="filter" class="filter-icon" />
@@ -63,6 +63,57 @@
         <v-btn class="button no-bg no-shadow nav-button-size">
           <i class="material-icons icon-secondary-color">power_settings_new</i>
         </v-btn>
+      </div>
+      <div class="show-buguer-header-nav-on-small">
+        <v-menu oapen-on-hover top offset-y>
+          <template v-slot:activator="{ on: menu, attrs }">
+            <v-tooltip bottom>
+              <template v-slot:activator="{ on: tooltip }">
+                <v-btn
+                  color="primary"
+                  dark
+                  v-bind="attrs"
+                  v-on="{ ...tooltip, ...menu }"
+                  >Menu</v-btn
+                >
+              </template>
+              <span>Menu</span>
+            </v-tooltip>
+          </template>
+          <v-list>
+            <v-list-item>
+              <div class="d-flex flex-column align-start">
+                <v-list-item-title>
+                  <v-btn class="button no-bg no-shadow ">
+                    <i class="material-icons icon-secondary-color">home</i>
+                    <small>Incluir Úsuario</small>
+                  </v-btn>
+                </v-list-item-title>
+                <v-list-item-title>
+                  <v-btn class="button no-bg no-shadow ">
+                    <i class="material-icons icon-secondary-color">home</i>
+                    <small>Home</small>
+                  </v-btn>
+                </v-list-item-title>
+                <v-list-item-title>
+                  <v-btn class="button no-bg no-shadow ">
+                    <i class="material-icons icon-secondary-color">settings</i>
+
+                    <small>Settrings</small>
+                  </v-btn>
+                </v-list-item-title>
+                <v-list-item-title>
+                  <v-btn class="button no-bg no-shadow ">
+                    <i class="material-icons icon-secondary-color"
+                      >power_settings_new</i
+                    >
+                    <small> SignOut </small>
+                  </v-btn>
+                </v-list-item-title>
+              </div>
+            </v-list-item>
+          </v-list>
+        </v-menu>
       </div>
     </div>
   </v-app-bar>
@@ -100,13 +151,24 @@ header .v-toolbar__content {
 .header {
   z-index: 0 !important;
 }
+.group {
+  display: flex;
+}
 </style>
 
 <style lang="scss" scoped>
 .v-toolbar__content {
   width: 100%;
 }
-
+.v-list-item__title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  background: #f5f5f5;
+  margin: 5px 0;
+  border-radius: 5px;
+}
 .icon-secondary-color {
   color: #757575;
 }
@@ -164,6 +226,7 @@ header .v-toolbar__content {
 }
 
 .nav-icons-user-securi-icon {
+  display: flex;
   background: #fff;
   border-radius: 5px;
   height: 50px;

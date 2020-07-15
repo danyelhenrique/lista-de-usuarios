@@ -7,10 +7,9 @@
   </div>
 </template>
 
-
 <script>
 export default {
-  name: "SearchBar"
+  name: "SearchBar",
 };
 </script>
 
@@ -29,6 +28,14 @@ div.search-bar {
       font-weight: 300;
       font-style: italic;
       font-size: 14px;
+    }
+  }
+
+  @media only screen and (max-width: 900px) {
+    width: 250px;
+
+    input {
+      width: 80%;
     }
   }
 }

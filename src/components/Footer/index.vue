@@ -2,7 +2,7 @@
   <footer
     class="footer-container d-flex align-center justify-space-between px-8"
   >
-    <div class="d-flex align-center no-ar">
+    <div class="d-flex align-center no-ar first-row">
       <div class="d-flex align-center mr-8">
         <i class="material-icons mr-2">radio_button_checked</i>
         <span>No Ar</span>
@@ -46,6 +46,24 @@ footer.footer-container {
   height: 46px;
   width: 100%;
   background: #212121;
+
+  @media only screen and (max-width: 900px) {
+    height: auto;
+    flex-direction: column;
+    .first-row {
+      flex-direction: column;
+
+      div {
+        margin: 5px;
+      }
+    }
+
+    > div {
+      width: 100%;
+      align-items: flex-start !important;
+      margin: 5px 0;
+    }
+  }
 
   div.no-ar {
     div:first-of-type {

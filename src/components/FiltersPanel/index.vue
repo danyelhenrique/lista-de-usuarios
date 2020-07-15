@@ -7,7 +7,7 @@
     >
       <div class="panel d-flex flex-column ">
         <div class="panel-title  d-flex  align-center pa-5">
-          <img :src="filter" alt="filter" class="filter-icon" />
+          <i class="material-icons">filter_list </i>
           <h3 class="ml-4">Filtros</h3>
           <v-btn
             class="button no-bg nav-button-size"
@@ -153,9 +153,14 @@ div.panel {
     width: 100%;
 
     h3 {
-      color: #000;
+      color: #383737;
       text-transform: uppercase;
       flex: 1;
+    }
+    > i {
+      color: #000;
+      font-size: 30px;
+      font-weight: bold;
     }
 
     button {
