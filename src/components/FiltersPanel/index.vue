@@ -6,9 +6,15 @@
       @click="toogleFilterPanel"
     >
       <div class="panel d-flex flex-column ">
-        <div class="panel-title  d-flex align-center pa-5">
+        <div class="panel-title  d-flex  align-center pa-5">
           <img :src="filter" alt="filter" class="filter-icon" />
           <h3 class="ml-4">Filtros</h3>
+          <v-btn
+            class="button no-bg nav-button-size"
+            @click="toogleFilterPanel"
+          >
+            <i class="material-icons">close</i>
+          </v-btn>
         </div>
         <div class="container d-flex flex-column pa-5">
           <div class="description">
@@ -149,6 +155,19 @@ div.panel {
     h3 {
       color: #000;
       text-transform: uppercase;
+      flex: 1;
+    }
+
+    button {
+      box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      i {
+        color: #424242;
+        font-size: 20px;
+      }
     }
   }
 
