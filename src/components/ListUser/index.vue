@@ -92,6 +92,25 @@ export default {
           actions: "..."
         },
         {
+          name: "Eclair",
+          email: "test@gmail.com",
+          created_at: "30/05/2020",
+          rules: "01",
+          updated_at: "30/05/2020",
+          status: true,
+          actions: "..."
+        },
+        {
+          name: "Cupcake",
+          email: "test@gmail.com",
+          created_at: "30/05/2020",
+          rules: "01",
+          updated_at: "30/05/2020",
+          status: true,
+          actions: "..."
+        },
+
+        {
           name: "Jelly bean",
           email: "test@gmail.com",
           created_at: "30/05/2020",

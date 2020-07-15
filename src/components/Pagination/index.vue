@@ -1,5 +1,5 @@
 <template>
-  <div class="pagination d-flex align-center justify-center my-6">
+  <div class="pagination d-flex align-center justify-center my-7">
     <v-btn class="mr-2 button no-shadow no-min-widht no-border button-default" x-large>Primeiro</v-btn>
 
     <v-btn

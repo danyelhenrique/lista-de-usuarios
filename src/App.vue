@@ -2,25 +2,21 @@
   <v-app>
     <Header />
     <v-content>
-      <section class="section-content">
+      <section class="section-content my-13 px-8">
         <router-view></router-view>
       </section>
     </v-content>
+    <Footer />
   </v-app>
 </template>
 
 
 <script>
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+
 export default {
   name: "App",
-  components: { Header }
+  components: { Header, Footer }
 };
 </script>
-
-<style lang="scss" scoped>
-section.section-content {
-  margin-top: 50px;
-  padding: 0px 30px;
-}
-</style>
