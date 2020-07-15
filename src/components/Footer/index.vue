@@ -1,5 +1,7 @@
 <template>
-  <footer class="footer-container d-flex align-center justify-space-between px-8">
+  <footer
+    class="footer-container d-flex align-center justify-space-between px-8"
+  >
     <div class="d-flex align-center no-ar">
       <div class="d-flex align-center mr-8">
         <i class="material-icons mr-2">radio_button_checked</i>
@@ -34,7 +36,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: "Footer",
+};
 </script>
 
 <style lang="scss" scoped>

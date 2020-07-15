@@ -8,7 +8,9 @@
     flat
     class="header"
   >
-    <div class="d-flex align-center justify-space-between container nav-container">
+    <div
+      class="d-flex align-center justify-space-between container nav-container"
+    >
       <div class="group d-flex align-center">
         <v-btn href="/" text>
           <v-img
@@ -36,8 +38,10 @@
         <SearchBar />
       </div>
 
-      <div class="group pa-2 nav-icons-container d-flex align-center justify-center">
-        <v-btn class="filter nav-button-size">
+      <div
+        class="group pa-2 nav-icons-container d-flex align-center justify-center"
+      >
+        <v-btn class="filter nav-button-size" @click="showFilterPanel">
           <img :src="filter" alt="filter" class="filter-icon" />
         </v-btn>
 
@@ -64,7 +68,6 @@
   </v-app-bar>
 </template>
 
-
 <script>
 import filter from "@/assets/filter.svg";
 import logo from "@/assets/analytic.png";
@@ -73,10 +76,17 @@ import SearchBar from "@/components/SearchBar";
 export default {
   name: "Header",
   components: { SearchBar },
-  data: () => ({
-    logoSrc: logo,
-    filter
-  })
+  data: function() {
+    return {
+      logoSrc: logo,
+      filter,
+    };
+  },
+  methods: {
+    showFilterPanel() {
+      this.$store.commit("TOOGLE_PANEL");
+    },
+  },
 };
 </script>
 
@@ -86,6 +96,9 @@ header > div {
 }
 header .v-toolbar__content {
   padding: 0 !important;
+}
+.header {
+  z-index: 0 !important;
 }
 </style>
 

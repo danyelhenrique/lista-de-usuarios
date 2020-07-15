@@ -15,19 +15,21 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="item in desserts" :key="item.name">
+        <tr v-for="user in users" :key="user.name" class="list-user">
           <td>
-            <label :for="item.name">
-              <input type="radio" :name="item.name" :id="item.name" />
+            <label :for="user.name">
+              <input type="radio" :name="user.name" :id="user.name" />
               <span></span>
             </label>
           </td>
-          <td>{{ item.name }}</td>
-          <td>{{ item.email }}</td>
-          <td class="text-center">{{ item.created_at }}</td>
-          <td class="text-center">{{ item.updated_at }}</td>
-          <td class="text-center">{{ item.rules }}</td>
-          <td class="text-left" v-if="item.status" style="color: green">ATIVO</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+          <td class="text-center">{{ user.created_at }}</td>
+          <td class="text-center">{{ user.updated_at }}</td>
+          <td class="text-center">{{ user.rules }}</td>
+          <td class="text-left" v-if="user.status" style="color: green">
+            ATIVO
+          </td>
           <td class="text-left" v-else style="color: red">DESATIVADO</td>
           <td class="text-center table-hover">
             <div class="icons">
@@ -57,13 +59,12 @@
   </v-simple-table>
 </template>
 
-
 <script>
 export default {
   name: "ListUsers",
   data: function() {
     return {
-      desserts: [
+      users: [
         {
           name: "Eclair",
           email: "test@gmail.com",
@@ -71,7 +72,7 @@ export default {
           rules: "01",
           updated_at: "30/05/2020",
           status: true,
-          actions: "..."
+          actions: "...",
         },
         {
           name: "Cupcake",
@@ -80,7 +81,7 @@ export default {
           rules: "01",
           updated_at: "30/05/2020",
           status: true,
-          actions: "..."
+          actions: "...",
         },
         {
           name: "Gingerbread",
@@ -89,7 +90,7 @@ export default {
           rules: "01",
           updated_at: "30/05/2020",
           status: true,
-          actions: "..."
+          actions: "...",
         },
         {
           name: "Eclair",
@@ -98,48 +99,48 @@ export default {
           rules: "01",
           updated_at: "30/05/2020",
           status: true,
-          actions: "..."
+          actions: "...",
         },
         {
-          name: "Cupcake",
+          name: "Cupcakee",
           email: "test@gmail.com",
           created_at: "30/05/2020",
           rules: "01",
           updated_at: "30/05/2020",
           status: true,
-          actions: "..."
+          actions: "...",
         },
 
         {
-          name: "Jelly bean",
+          name: "Jelly beana",
           email: "test@gmail.com",
           created_at: "30/05/2020",
           rules: "01",
           updated_at: "30/05/2020",
           status: false,
-          actions: "..."
+          actions: "...",
         },
         {
-          name: "Lollipop",
+          name: "Lollipopp",
           email: "test@gmail.com",
           created_at: "30/05/2020",
           rules: "01",
           updated_at: "30/05/2020",
           status: false,
-          actions: "..."
+          actions: "...",
         },
         {
-          name: "Honeycomb",
+          name: "Honeycombn",
           email: "test@gmail.com",
           created_at: "30/05/2020",
           rules: "01",
           updated_at: "30/05/2020",
           status: true,
-          actions: "..."
-        }
-      ]
+          actions: "...",
+        },
+      ],
     };
-  }
+  },
 };
 </script>
 

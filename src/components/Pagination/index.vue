@@ -1,50 +1,63 @@
 <template>
   <div class="pagination d-flex align-center justify-center my-7">
-    <v-btn class="mr-2 button no-shadow no-min-widht no-border button-default" x-large>Primeiro</v-btn>
-
     <v-btn
-      @click="prevtPage"
       class="mr-2 button no-shadow no-min-widht no-border button-default"
       x-large
-    >Anterior</v-btn>
+      >Primeiro</v-btn
+    >
+
+    <v-btn
+      @click="prevPage"
+      class="mr-2 button no-shadow no-min-widht no-border button-default"
+      id="prevPage"
+      x-large
+      >Anterior</v-btn
+    >
 
     <v-btn
       class="mr-2 pa-0 button no-shadow no-min-widht no-border button-size action page-active"
-    >{{page}}</v-btn>
+      id="page-pagination"
+      >{{ page }}</v-btn
+    >
 
     <v-btn
       @click="nextPage"
       class="mr-2 button no-shadow no-min-widht no-border button-default"
       x-large
-    >Próximo</v-btn>
+      id="nextPage"
+      >Próximo</v-btn
+    >
 
-    <v-btn class="mr-2 button no-shadow no-min-widht no-border button-default" x-large>Último</v-btn>
+    <v-btn
+      class="mr-2 button no-shadow no-min-widht no-border button-default"
+      x-large
+      >Último</v-btn
+    >
   </div>
 </template>
 
 <script>
 export default {
+  name: "Pagination",
   data: function() {
     return {
-      disabled: false,
-      length: 10,
       page: 1,
-      totalVisible: 1
+      totalVisible: 1,
     };
   },
   methods: {
     nextPage() {
       this.page += 1;
     },
-    prevtPage() {
+    prevPage() {
       const CheckPage = this.page <= 1 ? 1 : (this.page -= 1);
       this.page = CheckPage;
-    }
-  }
+    },
+  },
 };
 </script>
 
-<style lang="scss" >
+<style lang="scss">
 div.pagination {
   button {
     font-size: 12px !important;
